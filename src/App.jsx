@@ -1,12 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Test from "./components/Test";
+import Redireccion from "./components/Redireccion";
 
 function App() {
   return (
-    <>
-      <h1 className="text-4xl font-bold underline">Hello World</h1>
-
-      <Test />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<Test />} />
+        <Route path="/redireccionar" element={<Redireccion />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
